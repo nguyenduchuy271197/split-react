@@ -1,10 +1,11 @@
-import { Menu, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import NavMenu from "./NavMenu";
 
 export default function Navbar() {
   return (
     <div className="pb-5">
       {/* Container */}
-      <div className="px-4 md:px-8 max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl px-4 mx-auto md:px-8">
         <div className="flex justify-between py-5">
           <div className="flex items-center gap-20">
             {/* Logo */}
@@ -13,7 +14,7 @@ export default function Navbar() {
             </a>
 
             {/* Nav links */}
-            <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+            <ul className="items-center hidden gap-6 text-sm font-medium text-gray-600 md:flex">
               <li>
                 <a href="" className="hover:text-gray-900">
                   Features
@@ -31,11 +32,10 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <button className="md:hidden">
-            <Menu />
-          </button>
 
-          <div className="hidden md:flex items-center gap-6">
+          <NavMenu />
+
+          <div className="items-center hidden gap-6 md:flex">
             <a
               href="/"
               className="text-sm font-medium text-gray-600 hover:text-gray-900"
